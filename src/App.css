@@ -1,0 +1,199 @@
+:root {
+  --m-purple: #5d54bd;
+  --m-dark: #141621;
+  --m-red: #ff7276;
+  --m-green: #048785;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.main-heading {
+  width: 80%;
+  padding: 2rem 0;
+  color: var(--m-dark);
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.table {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  max-height: calc(100vh - 9rem);
+  background: #ebedf1;
+  border-radius: 0.5rem;
+}
+
+.full-name {
+  display: inline;
+}
+.shortened-name {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .table {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .table {
+    width: 100%;
+  }
+  .full-name {
+    display: none;
+  }
+  .shortened-name {
+    display: inline;
+  }
+}
+
+.table .top-header {
+  float: right;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 6rem;
+  background-color: #fbf3f2;
+}
+
+.table .top-header .days-box {
+  flex: 1;
+  height: 100%;
+  display: grid;
+  border: 1px solid var(--m-purple);
+}
+
+.table .top-header .days-box .day:hover {
+  background: rgba(210, 230, 240, 0.3);
+}
+.table .top-header .days-box .day {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #001b48;
+}
+
+.table .tasks-box {
+  height: calc(100% - 8rem);
+  width: 100%;
+  background-color: #fbf3f2;
+  border-right: 1px solid rgb(237, 237, 240);
+  overflow-y: scroll;
+}
+
+.table .top-header .titles-box {
+  width: 30rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2rem;
+  justify-content: space-between;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #5d54bd;
+}
+
+.table .top-header .titles-box .add-task-icon {
+  cursor: pointer;
+}
+
+.table .top-header .titles-box .add-task-icon:hover {
+  transform: scale(1.1);
+}
+
+.table .tasks-box .tasks-list {
+  height: auto;
+  width: 100%;
+}
+
+.no-tasks {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.no-tasks h1 {
+  font-size: 3rem;
+  color: gray;
+}
+
+.no-tasks button {
+  padding: 1.5rem 2rem;
+  background-color: white;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.no-tasks button:hover {
+  box-shadow: rgba(39, 90, 134, 0.3) 0px 1px 8px 0px,
+    rgba(36, 60, 80, 0.15) 0px 2px 6px 2px;
+}
+
+.priority-border-1 {
+  border-left: 4px solid orange;
+}
+.priority-border-2 {
+  border-left: 4px solid green;
+}
+.priority-border-3 {
+  border-left: 4px solid red;
+}
+
+@media screen and (max-width: 400px) {
+  .table .top-header .days-box {
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .titles-box {
+    z-index: 50;
+    position: absolute;
+    bottom: -4.5rem;
+    border-radius: 0.5rem;
+    right: 0;
+    width: 100% !important;
+  }
+
+  .task {
+    border-left: none !important;
+  }
+
+  .priority-border-1 {
+    border-left: none;
+    border-top: 4px solid orange;
+  }
+  .priority-border-2 {
+    border-left: none;
+    border-top: 4px solid green;
+  }
+  .priority-border-3 {
+    border-left: none;
+    border-top: 4px solid red;
+  }
+}

@@ -1,0 +1,130 @@
+.table .tasks-box .tasks-list .task {
+  width: 35rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: var(--m-dark);
+  background-color: rgb(248, 250, 252);
+}
+
+.table .tasks-box .tasks-list .task .details-icon:hover {
+  transform: scale(1.1);
+}
+
+.table .tasks-box .tasks-list .task .details-icon {
+  color: var(--m-purple);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.task-details h2 .close-icon {
+  color: var(--m-purple);
+  cursor: pointer;
+}
+
+.task-details h2 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  color: var(--m-dark);
+  font-weight: 500;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-details .detail-description {
+  font-size: 1.6rem;
+  color: #323234;
+  margin-bottom: 1rem;
+  max-height: 30rem;
+  overflow-y: scroll;
+  width: 100%;
+  line-height: 2.2rem;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+  background-color: #efedf5;
+}
+
+.task-details h3 {
+  font-size: 1.8rem;
+  background: var(--m-purple);
+  margin-bottom: 1rem;
+  color: white;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.task-details .days-completed-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.task-details .days-completed {
+  font-size: 1.5rem;
+  color: #2d2b2b;
+  text-transform: capitalize;
+  margin: 0.5rem 0 0.5rem 0.2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--m-purple);
+  box-shadow: rgba(0, 0, 0, 0.16) 0 3px 4px, rgba(0, 0, 0, 0.23) 0 3px 4px;
+}
+
+.task-details .modification-area {
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.task-details .divider {
+  background-color: var(--m-purple);
+}
+
+.task-details .modification-area button:nth-child(1) {
+  color: var(--m-red);
+  background-color: white;
+  font-weight: 600;
+}
+
+.task-details .modification-area .edit-button {
+  color: white;
+  background-color: var(--m-purple);
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 3px 4px, rgba(0, 0, 0, 0.23) 0 3px 4px;
+}
+.task-container {
+  max-height: 10rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .task-container {
+    margin: 1rem 0;
+    flex-direction: column;
+  }
+
+  .table .task-container .task {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .table .task-container .task .checkboxes {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
